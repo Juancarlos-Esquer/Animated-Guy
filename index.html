@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guy Dancing</title>
+    <style>
+        div.container {
+  width:1000px;
+  height:1000px;
+  background-color: grey;
+  position:relative;
+}
+
+
+div {
+  width:100px;
+  height:100px;
+  background-color: black;
+}
+@keyframes spinRed {
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+div#spinning-red {
+  position:absolute;
+  left:50%;
+  top:5%;
+  background-color:red;
+  animation: spinRed 2s linear infinite;
+}
+@keyframes scaleBlue {
+  0% {
+    transform:scale(2);
+  }
+  50% {
+    transform:scale(1);
+  }
+  100% {
+    transform:scale(2);
+  }
+}
+div#blue-circle-scale {
+  position:absolute;
+  top:20%;
+  left:50%;
+  background-color:blue;
+  border-radius:50%;
+  animation: scaleBlue 2s ease-in-out infinite;
+}
+@keyframes leftRockerOrange {
+  0% {
+    transform:rotate(0deg);
+  }
+  30%{
+    transform:rotate(45deg);
+  }
+  60%{
+    transform:rotate(-45deg);
+  }
+  100%{
+    transform:rotate(0deg);
+  }
+}
+div#left-rocking-orange {
+  width:150px;
+  height:25px;
+  background-color:orange;
+  position:absolute;
+  top:20%;
+  left:35%;
+  animation: leftRockerOrange 2s linear infinite;
+}
+div#right-rocking-orange {
+  background-color:orange;
+  position:absolute;
+  width:150px;
+  height:25px;
+  top:20%;
+  left:60%;
+  animation:leftRockerOrange 2s linear infinite;
+}
+@keyframes leftBfGreen {
+    0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(50px);
+  }
+  75% {
+    transform:translateX(-50px);
+  }
+  100% {
+    transform:translateX(0);
+  }
+}
+div#left-bf-green {
+  background-color:green;
+  position:absolute;
+  top:33%;
+  left:50%;
+  width:25px;
+  height:200px;
+  animation: leftBfGreen 2s linear infinite;
+}
+div#right-bf-green {
+  background-color:green;
+  position:absolute;
+  top:33%;
+  left:55%;
+  width:25px;
+  height:200px;
+  animation: leftBfGreen 2s linear infinite;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="spinning-red"></div>
+        <div id="blue-circle-scale"></div>
+        <div id="left-rocking-orange"></div>
+        <div id="right-rocking-orange"></div>
+        <div id="left-bf-green"></div>
+        <div id="right-bf-green"></div>
+          </div>
+    <script>
+
+    </script>
+</body>
+
+</html>
